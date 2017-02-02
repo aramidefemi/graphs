@@ -223,4 +223,52 @@ var chart = {
    json.series = series;   
       
    $('#c5').highcharts(json);
+
+    var chart = {
+      type: 'areaspline'	  
+   };
+    
+   var subtitle = {
+      style: {
+         position: 'absolute',
+         right: '0px',
+         bottom: '10px'
+      }
+   };
+   var legend = {
+      layout: 'vertical',
+      align: 'left',
+      verticalAlign: 'top',
+      x: 150,
+      y: 100,
+      floating: true,
+      borderWidth: 1,
+      backgroundColor: (Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'
+   };
+    
+   var tooltip = {
+       shared: true,
+       valueSuffix: ' units'
+   };
+   var credits = {
+       enabled: false
+   }
+   var plotOptions = {
+      areaspline: {
+         fillOpacity: 0.5
+      }
+   };   
+       
+      
+   var json = {};   
+   json.chart = chart; 
+   json.title = title; 
+   json.subtitle = subtitle; 
+   json.xAxis = xAxis;
+   json.yAxis = yAxis;
+   json.legend = legend;   
+   json.plotOptions = plotOptions;
+   json.credits = credits;
+   json.series = series;
+   $('#c8').highcharts(json);
 });
